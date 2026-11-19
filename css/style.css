@@ -317,27 +317,47 @@ footer p {
     gap: 12px;
 }
 
+color: #49634d;
+background: #426b4c;
+
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
 .filtro {
-    padding: 10px 18px;
-    border: 1px solid #dce6da;
+    padding: 10px 22px;
+    border: 1px solid #333;
     background: transparent;
     color: #49634d;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 25px;
     transition: 0.3s;
 }
 
-.filtro:hover,
-.filtro.ativo {
-    background: #426b4c;
-    color: white;
+.filtro:hover {
+    background: #333;
+    color: #fff;
 }
 
-.contador-fotos {
-    color: #819083;
-    font-size: 12px;
-    margin-bottom: 20px;
+.filtro.ativo {
+    background: #426b4c;
+    color: #000;
+    border-color: #fff;
 }
+
+.item {
+    transition: opacity 0.3s ease;
+}
+
+.item.oculto {
+    display: none;
+}
+
 
 
 * {

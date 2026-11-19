@@ -427,4 +427,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+const botoes = document.querySelectorAll(".filtro");
+const imagens = document.querySelectorAll(".item");
+
+botoes.forEach(botao => {
+
+    botao.addEventListener("click", () => {
+
+        // Remove o ativo dos outros botões
+        botoes.forEach(btn => btn.classList.remove("ativo"));
+
+        // Ativa o botão clicado
+        botao.classList.add("ativo");
+
+        const filtro = botao.dataset.filter;
+
+        imagens.forEach(imagem => {
+
+            const categoria = imagem.dataset.category;
+
+            if (filtro === "todos" || categoria === filtro) {
+                imagem.classList.remove("oculto");
+            } else {
+                imagem.classList.add("oculto");
+            }
+
+        });
+
+    });
+
+});
+
 
